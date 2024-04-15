@@ -93,7 +93,7 @@ ImageService --> "1" MelanomaDetector : uses
 
 ```
 
-Сгенерированный программный код для диаграммы классов:
+Сгенерированный программный код для диаграммы классов на языке Python:
 
 ```
 from flask import Flask, request, jsonify
