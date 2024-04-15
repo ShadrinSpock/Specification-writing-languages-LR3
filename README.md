@@ -1,10 +1,8 @@
-# LR3-diagram
+# LR3-diagrams
 
 ## Диаграмма состояний ##
 
-Диаграмма состояний UML представляет различные состояния и переходы в Telegram-боте для консультаций клиентов косметологической клиники. Она включает состояния, такие как просмотр новостей, просмотр услуг и выбор специалиста. Переходы показывают, как пользователь может перемещаться между этими состояниями на основе своих действий в Telegram-боте.
-
-Диаграмма состоний Telegram-бота для консультаций клиентов косметологической клиники
+Диаграмма состояний отображает различные состояния, через которые проходит приложение, начиная от загрузки изображения до окончательного диагноза. Она визуализирует изменения состояний системы в зависимости от результатов проверок и обработки данных, что помогает понять логику работы приложения и обработку ошибок.
 
 ![Изображение](https://www.plantuml.com/plantuml/png/XPCnJyCm48Lt_ugRaIhs3gW385K2L1NAWXYi-1fETSwLunGLn7_75pVqY2BerBxtlOlVrLcqoSRKDTwObujNcCskODdO6ZTx7wmp9ji9jGIV1l9dW6_9unehf0CwcCEcnGXT3xP0aXBwDpN4dgqdPnC57XWbvLc7yWDXcnr8npsQ2R0ScNjOdAVCvJ1jWOeucHbghcAei6s9wv8f2OcCPqf6MXTlb1NlFZZqTxbu5ipNi3cjZbOdQc_3lFyEZ5sq7XZJUuWxQCIJX28bjuheg4hbp4MMVQCxFrKXwfag6tZ9-Vnrp0K4c3HABVIMGsElCM6Lq9KzDISLFEtG7_yUyH3-6TAn6ZDczU97exGjvVKrdSCDftYyX4TxmDDLr7_66LWo9RAUFl2qyg68XjOTm_wd85XVXqZfhJ5cWUpa_Va6)
 
@@ -49,9 +47,7 @@ Predicting : Entry/ Run prediction algorithm
 
 ## Диаграмма классов ##
 
-Диаграмма классов представляет различные классы и их взаимосвязи в Telegram-боте для консультаций клиентов косметологической клиники. К нему относятся классы ТелеграмБот, Новость, Услуга и Специалист, а также их атрибуты и методы. Telegram-бот имеет ассоциации с новостями, услугами и специалистами, что позволяет пользователям взаимодействовать с ними с помощью методов бота.
-
-Диаграмма классов Telegram-бота для консультаций клиентов косметологической клиники
+Диаграмма классов показывает структуру веб-приложения, включая классы и их взаимосвязи, которые участвуют в процессе детекции меланомы. Классы включают контроллер, сервис для работы с изображениями, обработчик изображений, модель нейронной сети и детектор меланомы.
 
 ![Изображение](https://www.plantuml.com/plantuml/png/TP8nJyD038Nt-nMtqGhr3tH07Rfqe48ip6xkjJtXtaMs0og8_qwIInJQY0onzFpyENxAHet4cWixz-2tECO4RsVuYaaLwlhgtt3O9OCSgOB_Thvz7fkQCuNTXKvOnEwzB7g8MZDTNw4DsqBwidG_Ra3r0o-IAwXc6M6re2xQN-3QJphAgWcqHoF4UzXdblVd7C0ZZ1BnzGk5D2CKQeYLnPmct9QC3gGO8MfPCB-Ey-dsiY8BJ28-CFJQ7QNTygTS1KpTKZt7MjrDfglLqtqoQzyevhRfGmV3tLXdcKVJcXKfg0zav4R4_-Rndc70RP12zvFy0W00)
 
@@ -165,9 +161,7 @@ if __name__ == '__main__':
 
 ## Диаграмма последовательности ##
 
-Диаграмма последовательности изображает взаимодействие между клиентом, Telegram-ботом и косметологической клиникой. Она показывает, как клиент взаимодействует с ботом для просмотра новостей, услуг, специалистов и совершения выбора, а бот общается с клиникой для получения соответствующей информации.
-
-Диаграмма последовательности Telegram-бота для консультаций клиентов косметологической клиники
+Диаграмма последовательности демонстрирует взаимодействие между компонентами системы в процессе обработки изображения. Она начинается с загрузки изображения пользователем и заканчивается выводом результатов детекции меланомы, подчеркивая коммуникацию между веб-интерфейсом, контроллером, сервисами обработки и моделями.
 
 ![Изображение](https://www.plantuml.com/plantuml/png/bPG_JyCm4CLtVufJftIes3kWIdGfKl-8KZ569ZwGXHD7jbF4joTs4XBx0YfR_FpkvwVdkXlhk75DgLZDZPE5h7dbO76nQ1R0BVYFUEi5Ns5NEJHllC3WQPKVWNeVTEMCLWhDO1wLsBqh-Jl26SrLzkIWzCASzsHqWTPgCxe7AM4Vi35SmG7TfpOViDS2LHZgDdezoF7W7XMlTCbXYmuBrnyrg8F8c2yALlTH6R26Iwqq5nQapyQYpM2UbD6wJyVpCzmrOGQoCBDal73ooXqcrR5ewMbZM-5eow-O1mOXHRsEYn0ggR45rGRhRZcFIujF02iQhSUXw81Cu6yiaYvjlgM9y9cN_KwMqCUWzDeI8TH8Vn6m1dyZUUaNsOH7hOnAi9gF7MYv1wCO6vY5tfwpDYXauKW7j-OQ4L9NkK7RAFV_SFJ6mntDCqc6vCxfE_cJDXqcZuIypoTqZQcWmq3sU3uUbbDQD4_UxyM6E5jfQyM_UWhRO2NyF-et)
 
@@ -218,9 +212,7 @@ WebInterface -> User : Display result
 
 ## Диаграмма деятельности ##
 
-Диаграмма деятельности отображает последовательность действий в Telegram-боте для консультаций клиентов косметологической клиники. Она начинается с приветственного сообщения, а затем, в зависимости от ввода клиента, либо показывает список новостей, услуг, специалистов, либо завершает сеанс
-
-Диаграмма деятельности Telegram-бота для консультаций клиентов косметологической клиники
+Диаграмма деятельности описывает шаги процесса веб-приложения от загрузки изображения пользователем до получения результатов о наличии меланомы. Эта диаграмма подчеркивает последовательность операций и условные переходы, зависящие от успешности загрузки файла и его типа.
 
 ![Изображение](http://www.plantuml.com/plantuml/png/TP51JiCm44NtFiLNL-qLsWLTiAa4284um13_50jd7DcJLhqz41UQA69dZT-R-PhP5vDiGnVT-73RjyACeOz9V47ev4YSWk3CTmGrvbOQxfmBBTQ7WZP4NcdwkmtiWuhrXMNZW2bZbvuuIGmB2jY-oebrrguMdZFxd1gMCYi_9F5G3baYb7PE-HDTyemtpOV6C9IWn-cF0_xYT8oYgHDu6XjRnXvRlT26h5Wz_jBtLtfLEp8MOgrf8Jmb_Eke3stDCsqmqmywBkcsjD6jvaIPpfiVuPklj2kMUhUd-f_hVW40)
 
