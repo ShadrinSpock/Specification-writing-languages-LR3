@@ -93,6 +93,76 @@ ImageService --> "1" MelanomaDetector : uses
 
 ```
 
+Сгенерированный программный код для диаграммы классов:
+
+```
+from flask import Flask, request, jsonify
+from keras.models import load_model
+from keras.preprocessing import image
+from PIL import Image
+import numpy as np
+import os
+
+app = Flask(__name__)
+
+class ImageProcessor:
+    def preprocess_image(self, img):
+        img = img.resize((224, 224))  # Assuming the model expects 224x224 images
+        img_array = image.img_to_array(img)
+        img_array_expanded = np.expand_dims(img_array, axis=0)
+        return img_array_expanded / 255.0
+
+class NeuralNetworkModel:
+    def __init__(self, model_path):
+        self.model_path = model_path
+        self.model = None
+
+    def load_model(self):
+        self.model = load_model(self.model_path)
+
+    def predict(self, processed_image):
+        return self.model.predict(processed_image)[0][0]
+
+class MelanomaDetector:
+    def __init__(self, processor, model):
+        self.processor = processor
+        self.model = model
+
+    def detect_melanoma(self, img):
+        processed_image = self.processor.preprocess_image(img)
+        prediction = self.model.predict(processed_image)
+        return prediction > 0.5
+
+# Initialize components
+model_path = 'path_to_your_model.h5'
+processor = ImageProcessor()
+model = NeuralNetworkModel(model_path)
+model.load_model()
+detector = MelanomaDetector(processor, model)
+
+@app.route('/upload', methods=['POST'])
+def upload_image():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'})
+    
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'})
+    
+    if file and allowed_file(file.filename):
+        img = Image.open(file.stream)
+        result = detector.detect_melanoma(img)
+        return jsonify({'melanoma_detected': result})
+    
+    return jsonify({'error': 'Invalid file'})
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg'}
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
 ## Диаграмма последовательности ##
 
 Диаграмма последовательности изображает взаимодействие между клиентом, Telegram-ботом и косметологической клиникой. Она показывает, как клиент взаимодействует с ботом для просмотра новостей, услуг, специалистов и совершения выбора, а бот общается с клиникой для получения соответствующей информации.
