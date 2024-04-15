@@ -42,7 +42,6 @@ ModelLoading : Entry/ Initialize model
 Predicting : Entry/ Run prediction algorithm
 
 @enduml
-
 ```
 
 ## Диаграмма классов ##
@@ -86,7 +85,6 @@ NeuralNetworkModel --> "1" MelanomaDetector : <<use>>
 ImageService --> "1" MelanomaDetector : uses
 
 @enduml
-
 ```
 
 Сгенерированный программный код для диаграммы классов на языке Python:
@@ -207,7 +205,6 @@ WebController -> WebInterface : Return result (JSON)
 deactivate WebController
 WebInterface -> User : Display result
 @enduml
-
 ```
 
 ## Диаграмма деятельности ##
@@ -244,6 +241,4 @@ endif
 
 stop
 @enduml
-
-
 ```
