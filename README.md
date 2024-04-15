@@ -1,4 +1,4 @@
-# LR3-diagrams
+# LR3-diagrams-for-melnoma-detection-web-app
 
 ## Диаграмма состояний ##
 
